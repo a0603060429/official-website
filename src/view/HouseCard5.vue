@@ -1,10 +1,10 @@
 <template>
-    <div class="row" style="width: 100%;margin: 0 auto;">
+    <div class="row" style="width: 100%;margin: 0 auto;background-color: #eee;">
         <div class="col-sm-6 col-md-4" style="display:flex;width:100%;flex-wrap:wrap;justify-content: center;gap: 0 50px;">
-            <div v-for="(item,index) in dataList" :key="index" style="width:30%;height:300px;margin:20px 0">
-                <div class="thumbnail" style="display:flex;height:100%;background-color:#f4f4f4">
+            <div v-for="(item,index) in dataList" :key="index" style="width:30%;height:320px;margin:20px 0">
+                <div class="thumbnail" style="display:flex;height:100%;border-radius: 28px;box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);">
                     <div style="width:50%;height:100%;padding:10px;">
-                        <img :src=item.image style="width:100%;height:100%;max-width:none" alt="">
+                        <img :src=item.image style="width:100%;height:100%;max-width:none;border-radius:12px;" alt="">
                     </div>
                     <div class="caption" style="width:50%;position: relative;">
                         <div>
@@ -109,7 +109,7 @@ export default {
     padding: 4px;
     margin-bottom: 20px;
     line-height: 1.42857143;
-    background-color: #fff;
+    background-color: #eee;
     border-radius: 4px;
     -webkit-transition: border .2s ease-in-out;
     transition: border .2s ease-in-out;

@@ -12,9 +12,9 @@
       </div>
       <div class="section">
           <div class="company">
-            <div class="company_left">
+            <!-- <div class="company_left">
                 <img class="company_img" src="@/assets/img/img1.jpg" alt="">
-            </div>
+            </div> -->
             <div class="company_right">
               <h2 class="company_introduce">
                 会社概要
@@ -37,7 +37,7 @@
               <p>不動産コンサルティング業</p>
               <p>不動産管理</p>
               <p>インボイス登録番号T5013201018383</p>
-              <a href="/#/contactus?index=6" class="btn btn-lg btn-block btn-info">联系我们</a>
+              <a href="/#/contactus?index=6" class="btn btn-lg btn-info">联系我们</a>
             </div>
           </div>
       </div>
@@ -181,6 +181,7 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
+  text-align: center;
 }
 .company_left {
   flex: 1;
@@ -191,11 +192,16 @@ export default {
     height: 100%;
 }
 .company_introduce{
-
+  margin: 50px 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
 }
 .company_right {
-  padding: 100px;
   flex: 1;
+}
+.company_right a {
+  width: 20%;
 }
 .section3_title {
   margin: 50px 0;

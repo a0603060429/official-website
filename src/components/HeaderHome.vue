@@ -146,7 +146,7 @@ export default {
 <style scoped>
 /* 顶部 */
 #header {
-  background: #f4f4f4;
+  background: #eee;
   transition: all ease 0.6s;
   position: absolute;
   width: 100%;
