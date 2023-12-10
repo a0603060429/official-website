@@ -1,24 +1,5 @@
 <template>
   <div id="HomePage">
-<full-page :options="options" ref="fullpage">
-      <div class="section">
-        <h3>vue-fullpage.js</h3>
-      </div>
-      <div class="section">
-        <div class="slide">
-          <h3>Slide 2.1</h3>
-        </div>
-        <div class="slide">
-          <h3>Slide 2.2</h3>
-        </div>
-        <div class="slide">
-          <h3>Slide 2.3</h3>
-        </div>
-      </div>
-      <div class="section">
-        <h3>Section 3</h3>
-      </div>
-    </full-page>
     <!-- 轮播图 -->
     <div id="swiper" class="container-fuild">
       <div class="swiper-container banner-swiper">
@@ -74,7 +55,6 @@
         </div>
       </div>
     </div>
-    <!-- 为什么选择我们 -->
     <div id="whyChooseUs" class="conatiner-fuild">
       <div class="container">
         <div class="whyChooseUs-title text-center">
@@ -114,23 +94,6 @@ export default {
   name: "HomePage",
   data() {
     return {
-      options: {
-                    licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
-                    //是否显示导航，默认为false
-                    navigation: true,
-                    //为每个section设置背景色
-                    sectionsColor: [
-                        "#41b883",
-                        "#ff5f45",
-                        "#0798ec",
-                        "#fec401",
-                        "#1bcee6",
-                        "#ee1a59",
-                        "#2c3e4f",
-                        "#ba5be9",
-                        "#b4b8ab"
-                    ],
-                },
       swiperList: [
         {
           img: require("@/assets/img/banner1.png"),

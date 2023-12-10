@@ -82,7 +82,7 @@
 </template>
 <script>
 export default {
-  name: "Header",
+  name: "HeaderHome",
   data() {
     return {
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
@@ -137,16 +137,9 @@ export default {
     }
   },
   created() {
-    console.log(this.$route.query)
-    if (this.$route.query.index) {
-      this.navIndex = 6;
-      sessionStorage.setItem('navIndex',6)
-      this.menuName = '联系我们';
-    } else {
-      this.navIndex = 1;
-      sessionStorage.setItem('navIndex',1)
-      this.menuName = '区分マンション';
-    }
+    this.navIndex = 0;
+    sessionStorage.setItem('navIndex',0)
+    this.menuName = 'ホームページ';
   }
 };
 </script>
@@ -155,6 +148,9 @@ export default {
 #header {
   background: #f4f4f4;
   transition: all ease 0.6s;
+  position: absolute;
+  width: 100%;
+  top: 0px;
 }
 #header .header-top {
   height: 50px;

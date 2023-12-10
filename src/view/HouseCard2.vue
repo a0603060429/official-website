@@ -2,7 +2,7 @@
     <div class="row" style="width: 100%;margin: 0 auto;">
         <div class="col-sm-6 col-md-4" style="display:flex;width:100%;flex-wrap:wrap;justify-content: center;gap: 0 50px;">
             <div v-for="(item,index) in dataList" :key="index" style="width:30%;height:320px;margin:20px 0">
-                <div class="thumbnail" style="display:flex;height:100%;">
+                <div class="thumbnail" style="display:flex;height:100%;background-color:#f4f4f4">
                     <div style="width:50%;height:100%;padding:10px;">
                         <img :src=item.image style="width:100%;height:100%;max-width:none" alt="">
                     </div>
@@ -104,6 +104,7 @@ export default {
     font-size: 24px;
     color: #287dfa;
     text-align: right;
+    font-weight: bold;
     /* cursor: pointer; */
 }
 .thumbnail_noborder {

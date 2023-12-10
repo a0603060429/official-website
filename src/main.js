@@ -34,6 +34,8 @@ import 'animate.css'
 import Header from './components/Header'
 Vue.component(Header.name,Header)
 
+import HeaderHome from './components/HeaderHome'
+Vue.component(HeaderHome.name, HeaderHome)
 
 /* 尾部组件 */
 import Footer from './components/Footer'
@@ -42,6 +44,14 @@ Vue.component(Footer.name,Footer)
 /* 回到顶部 */
 import GoTop from './components/GoTop'
 Vue.component(GoTop.name,GoTop)
+
+import GoTopHome from './components/GoTopHome'
+Vue.component(GoTopHome.name,GoTopHome)
+
+import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverflow:true
+import VueFullPage from 'vue-fullpage.js'
+
+Vue.use(VueFullPage)
 
 Vue.config.productionTip = false
 

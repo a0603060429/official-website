@@ -13,20 +13,17 @@ export default new Router({
       name: 'Register',
       component: resolve => require(['@/view/Register'], resolve),
     }, {
+      path: '/home',
+      name: 'Home',
+      component: resolve => require(['@/view/HomePage'], resolve),
+    }, {
       path: '/index',
       name: 'index',
       component: resolve => require(['@/view/PageView'], resolve),
       children: [
         {
           path: '/index',
-          redirect: '/home'
-        }, {
-          path: '/home',
-          name: 'home',
-          component: resolve => require(['@/view/HomePage'], resolve),
-          meta: {
-            title: 'ホームページ'
-          }
+          redirect: '/housecard1'
         }, {
           path: '/housecard1',
           name: 'housecard1',
