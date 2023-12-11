@@ -99,7 +99,6 @@ export default {
     position: absolute;
     bottom: 10px;
     left: 20px;
-    background-color: #f4f4f4;
 }
 .price {
     font-size: 24px;

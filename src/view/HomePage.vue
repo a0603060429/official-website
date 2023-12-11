@@ -41,7 +41,7 @@
             </div>
           </div>
       </div>
-      <div class="section">
+      <div class="section home3">
         <div class="section3_title text-center">
           <p>代表挨拶</p>
         </div>
@@ -114,7 +114,7 @@ export default {
             scrollBar: false,
             menu: '#menu',
             navigation: true,
-            anchors: ['home'],
+            anchors: ['home','home1','home2','home3'],
             sectionsColor: ['#eee', '#eee', '#eee', '#eee', '#eee', '#eee', '#eee', '#eee', '#eee']
             },
           serverList: [
@@ -178,10 +178,12 @@ export default {
   margin-top: 40px;
 }
 .company {
+  color: #fff;
   width: 100%;
   height: 100%;
   display: flex;
   text-align: center;
+  background-image: url(../assets/img/bg.jpg);
 }
 .company_left {
   flex: 1;
@@ -201,7 +203,11 @@ export default {
   flex: 1;
 }
 .company_right a {
+  margin-top: 40px;
   width: 20%;
+}
+.company_right p {
+  font-size: large;
 }
 .section3_title {
   margin: 50px 0;
@@ -238,6 +244,13 @@ export default {
 }
 .represent p {
   text-indent: 2em;
+  font-size: large;
+}
+.home3 {
+  color: #fff;
+  background-image: url(../assets/img/bg2.jpg);
+  background-position: center; /* 居中显示 */
+  background-size: cover;
 }
 </style>
 

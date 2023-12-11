@@ -5,13 +5,14 @@
     <div class="header-top container-fuild hidden-xs">
       <div class="container">
         <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>888-888-888
-          <span class="glyphicon glyphicon-envelope"></span>xxx@163.com
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
+          <span class="glyphicon glyphicon-earphone"></span>03-6884-7713
+          <span class="glyphicon glyphicon-envelope"></span>njq1981@gmail.com
+          <!-- <span class="glyphicon glyphicon-time"></span>7x24小时为您服务 -->
         </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>  加入会员！
-          <span class="glyphicon glyphicon-hand-left"></span>
+        <div class="shejiao pull-right" style="cursor: pointer;"  @click="logInOut()">
+          {{logInOutName}}
+          <!-- <span class="glyphicon glyphicon-hand-right" style="cursor: pointer;" @click="logInOut()"></span>{{logInOutName}}
+          <span class="glyphicon glyphicon-hand-left"></span> -->
         </div>
       </div>
     </div>
@@ -119,7 +120,9 @@ export default {
           path: "/contactus",
           children: []
         }
-      ]
+      ],
+      logInOutName: 'ログイン',
+      loginStatus: ''
     };
   },
   methods: {
@@ -134,13 +137,28 @@ export default {
       } else {
         this.menuClass = "glyphicon glyphicon-menu-down";
       }
+    },
+    logInOut() {
+      if (!this.loginStatus) {
+        this.$router.push({name:'Login'})
+      } else {
+        localStorage.removeItem('house_token')
+        this.logInOutName = 'ログイン'
+        this.loginStatus = ''
+      }
     }
   },
   created() {
     this.navIndex = 0;
     sessionStorage.setItem('navIndex',0)
     this.menuName = 'ホームページ';
-  }
+    this.loginStatus = localStorage.getItem('house_token');
+    if (this.loginStatus) {
+      this.logInOutName = 'ログアウト'
+    } else {
+      this.logInOutName = 'ログイン'
+    }
+  },
 };
 </script>
 <style scoped>

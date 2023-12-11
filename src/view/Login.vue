@@ -64,7 +64,7 @@ export default {
       if (res.data.code == 200) {
         let token = res.data.data
         this.$store.commit('setToken', token)
-        this.$router.push({name:'home'})
+        this.$router.push({name:'Home'})
       } else {
         this.message = "用户名或密码错误"
         this.visible = true;
